@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: indic-text-norm
+Version: 1.0.0
+Summary: A module to normalize indian text by converting the short-forms and representation into their full-forms and actual word representation.
+Home-page: UNKNOWN
+Author: AI4Bhārat
+Author-email: opensource@ai4bharat.org
+License: MIT
+Description: # AI4Bharat Indic-text-normalizer
+        
+            A module for normalizing the text in the given sentence that involves converting the fractions, honourifics, cardinals, metrics and numbers into their actual word forms and word representations in English and Indian Languages.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

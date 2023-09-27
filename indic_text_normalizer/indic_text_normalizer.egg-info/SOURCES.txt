@@ -1,0 +1,8 @@
+README.md
+setup.py
+indic_norm/__init__.py
+indic_text_normalizer.egg-info/PKG-INFO
+indic_text_normalizer.egg-info/SOURCES.txt
+indic_text_normalizer.egg-info/dependency_links.txt
+indic_text_normalizer.egg-info/requires.txt
+indic_text_normalizer.egg-info/top_level.txt

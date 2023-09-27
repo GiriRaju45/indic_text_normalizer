@@ -1,0 +1,1 @@
+from indic_text_norm.normalization.normalizer import Normalizer
