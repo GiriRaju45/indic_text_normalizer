@@ -1,7 +1,7 @@
 import re
 from indic_numtowords import num2words
 
-def pan_card(s):
+def pan_card(s, lang):
     """
     Transforms a PAN card number found within a string by converting its numeric characters into words, 
     using a specified language.
@@ -21,7 +21,7 @@ def pan_card(s):
         pan_card_number = match.group()
         for character in pan_card_number:
             if character.isdigit():
-                output += f"{num2words(character, lang='hi', variations=False)} "
+                output += f"{num2words(character, lang=lang, variations=False)} "
             else:
                 output += character + ' '
         transformed_pan = re.sub(r'\s+', ' ', output.strip())

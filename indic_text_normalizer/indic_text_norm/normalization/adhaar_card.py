@@ -15,7 +15,7 @@ def adhaar_card(s, lang):
              are replaced with their word equivalents in the specified language.
     """
     output = ""
-    phone_num_regex = re.compile(r'\b\d{4}(\s?\d{4}){3}\b')
+    phone_num_regex = re.compile(r'\b((\d{4}\s){2}\d{4}|\d{12})\b')
     match = phone_num_regex.search(s)
     if match:
         adhaar_card_number = match.group()
