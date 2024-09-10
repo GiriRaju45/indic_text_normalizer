@@ -12,7 +12,7 @@ def months2words(lang, text, dic: dict):
     Returns:
         str: The input text with month names converted into words in the specified language.
     """
-    months_dict = dic.get(lang, {}).get("Months", {})
+    months_dict = dic["Months"]
     months_regex = re.compile(r'\b(january|february|march|april|may|june|july|august|september|october|november|december)\b', re.IGNORECASE)
 
     result = ""
@@ -25,27 +25,3 @@ def months2words(lang, text, dic: dict):
     
     result += text[last_pos:]
     return result
-
-# # Example usage
-# dic = {
-#     "hin": {
-#         "Months": {
-#             "january": "जनवरी",
-#             "february": "फरवरी",
-#             "march": "मार्च",
-#             "april": "अप्रैल",
-#             "may": "मई",
-#             "june": "जून",
-#             "july": "जुलाई",
-#             "august": "अगस्त",
-#             "september": "सितंबर",
-#             "october": "अक्टूबर",
-#             "november": "नवंबर",
-#             "december": "दिसंबर"
-#         }
-#     }
-# }
-
-# text = "I have an event in January and another one in July."
-# converted_text = months2words("hin", text, dic)
-# print(converted_text)

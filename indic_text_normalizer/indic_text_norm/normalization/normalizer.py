@@ -44,6 +44,7 @@ class Normalizer():
         text = adhaarcard2words(lang, text)
         text = pancard2words(lang, text)
         text = months2words(lang, text, self.lang_jsons[lang])
+        print(text)
         text = currencies2words(lang, text, self.lang_jsons[lang])
         text = cardinals2words(lang, text, self.lang_jsons[lang])
         text = metrics2words(lang, text, self.lang_jsons[lang])
@@ -54,8 +55,8 @@ class Normalizer():
         return text
 
 
-hi = "My birthday comes in September!!"
+text = ""
 
 norm = Normalizer()
 
-print(norm.normalizer(hi, 'hin'))
+print(norm.normalizer(text, 'hin'))
