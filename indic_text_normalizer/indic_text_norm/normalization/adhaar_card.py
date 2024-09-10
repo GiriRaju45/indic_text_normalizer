@@ -1,7 +1,7 @@
 import re
 from indic_numtowords import num2words
 
-def adhaar_card(s, lang):
+def adhaarcard2words(lang, s):
     """
     Transforms an Aadhaar card number found within a string by converting its numeric characters into words, 
     using a specified language.
@@ -15,8 +15,8 @@ def adhaar_card(s, lang):
              are replaced with their word equivalents in the specified language.
     """
     output = ""
-    phone_num_regex = re.compile(r'\b((\d{4}\s){2}\d{4}|\d{12})\b')
-    match = phone_num_regex.search(s)
+    adhaar_card_regex = re.compile(r'\b((\d{4}\s){2}\d{4}|\d{12})\b')
+    match = adhaar_card_regex.search(s)
     if match:
         adhaar_card_number = match.group()
         for digit in adhaar_card_number:

@@ -1,7 +1,7 @@
 import re
 from indic_numtowords import num2words
 
-def pan_card(s, lang):
+def pancard2words(lang, s):
     """
     Transforms a PAN card number found within a string by converting its numeric characters into words, 
     using a specified language.
@@ -15,8 +15,8 @@ def pan_card(s, lang):
              are replaced with their word equivalents in the specified language.
     """
     output = ""
-    phone_num_regex = re.compile(r'\b[A-Z]{5}[0-9]{4}[A-Z]\b')
-    match = phone_num_regex.search(s)
+    pan_card_regex = re.compile(r'\b[A-Z]{5}[0-9]{4}[A-Z]\b')
+    match = pan_card_regex.search(s)
     if match:
         pan_card_number = match.group()
         for character in pan_card_number:

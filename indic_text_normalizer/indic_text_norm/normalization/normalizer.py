@@ -8,8 +8,12 @@ from fraction import fractions2words
 from metrics import metrics2words
 from num_to_words import numtowords
 from honorificstowords import honorific2words
+from phone_number import phone2words
+from pan_card import pancard2words
+from adhaar_card import adhaarcard2words
+from months import months2words
 
-parent_file_path = 'data'
+parent_file_path = '../data'
 lang2jsons = os.listdir(parent_file_path)
 
 class Normalizer():
@@ -35,20 +39,23 @@ class Normalizer():
         text (str): The normalized text.
 
         """
-   
+
+        text = phone2words(lang, text)
+        text = adhaarcard2words(lang, text)
+        text = pancard2words(lang, text)
+        text = months2words(lang, text, self.lang_jsons[lang])
         text = currencies2words(lang, text, self.lang_jsons[lang])
         text = cardinals2words(lang, text, self.lang_jsons[lang])
         text = metrics2words(lang, text, self.lang_jsons[lang])
         text = fractions2words(lang, text, self.lang_jsons[lang])
         text = honorific2words(lang, text, self.lang_jsons[lang])
         text = numtowords(lang, text)
-
        
         return text
 
 
-ta = "வணக்கம் Dr. ராகுல். என் மகனின் 1 வது பிறந்த நாள். என்னிடம் $4000 உள்ளது. நான் வரிசையில் நின்று 1/2 லி மாம்பழச்சாறு வாங்கினேன். என்னிடம் 1500சதுர.மீ இடம் உள்ளது, இன்றைக்கு தேதி 21 இல்லை 20 ஆ?"
+hi = "My birthday comes in September!!"
 
 norm = Normalizer()
 
-print(norm.normalizer(ta, 'ta'))
+print(norm.normalizer(hi, 'hin'))

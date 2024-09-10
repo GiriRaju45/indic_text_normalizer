@@ -1,7 +1,7 @@
 import re
 from indic_numtowords import num2words
 
-def find_phone_number(s, lang):
+def phone2words(lang, s):
     """
     Transforms a phone number found within a string by converting its numeric characters into words in Hindi.
 

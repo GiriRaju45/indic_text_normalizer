@@ -5,7 +5,7 @@ from functools import reduce
 # A language specific dictionary for regex creation
 # dvn key includes all the languages that use the Devangari script as common 
 
-lang_dict = json.load(open('/home/ai4bharat/indic_text_normalizer/indic_text_norm/data/ta.json', encoding= 'utf-8'))
+# lang_dict = json.load(open('/home/ai4bharat/indic_text_normalizer/indic_text_norm/data/ta.json', encoding= 'utf-8'))
 
 
 bi_syl_regex = {} 
