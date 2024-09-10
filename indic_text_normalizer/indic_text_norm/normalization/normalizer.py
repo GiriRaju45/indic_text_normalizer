@@ -41,22 +41,21 @@ class Normalizer():
 
         """
 
-        text = phone2words(lang, text)
-        text = adhaarcard2words(lang, text)
-        text = pancard2words(lang, text)
-        text = months2words(lang, text, self.lang_jsons[lang])
-        text = currencies2words(lang, text, self.lang_jsons[lang])
-        text = cardinals2words(lang, text, self.lang_jsons[lang])
-        text = metrics2words(lang, text, self.lang_jsons[lang])
-        text = fractions2words(lang, text, self.lang_jsons[lang])
-        text = honorific2words(lang, text, self.lang_jsons[lang])
-        text = numtowords(lang, text)
-        text = symbols2words(text, self.lang_jsons[lang])
+        # text = phone2words(lang, text)
+        # text = adhaarcard2words(lang, text)
+        # text = pancard2words(lang, text)
+        # text = months2words(lang, text, self.lang_jsons[lang])
+        # text = currencies2words(lang, text, self.lang_jsons[lang])
+        # text = cardinals2words(lang, text, self.lang_jsons[lang])
+        # text = metrics2words(lang, text, self.lang_jsons[lang])
+        # text = fractions2words(lang, text, self.lang_jsons[lang])
+        # text = honorific2words(lang, text, self.lang_jsons[lang])
+        # text = numtowords(lang, text)
+        text = symbols2words(lang, text, self.lang_jsons[lang])
        
         return text
 
 text = ""
-
 norm = Normalizer()
 
 print(norm.normalizer(text, 'hin'))
