@@ -12,6 +12,7 @@ from phone_number import phone2words
 from pan_card import pancard2words
 from adhaar_card import adhaarcard2words
 from months import months2words
+from symbols import symbols2words
 
 parent_file_path = '../data'
 lang2jsons = os.listdir(parent_file_path)
@@ -44,16 +45,15 @@ class Normalizer():
         text = adhaarcard2words(lang, text)
         text = pancard2words(lang, text)
         text = months2words(lang, text, self.lang_jsons[lang])
-        print(text)
         text = currencies2words(lang, text, self.lang_jsons[lang])
         text = cardinals2words(lang, text, self.lang_jsons[lang])
         text = metrics2words(lang, text, self.lang_jsons[lang])
         text = fractions2words(lang, text, self.lang_jsons[lang])
         text = honorific2words(lang, text, self.lang_jsons[lang])
         text = numtowords(lang, text)
+        text = symbols2words(text, self.lang_jsons[lang])
        
         return text
-
 
 text = ""
 
